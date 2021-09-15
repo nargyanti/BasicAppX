@@ -34,45 +34,25 @@ public class Temperature {
     public double convert(String oriUnit, String convUnit, double value) {
         switch (oriUnit) {
             case "°C":
-                switch (convUnit) {
-                    case "°C":
-                        value = getCelcius();
-                        break;
-                    case "°F":
-                        value = getFahrenheit();
-                        break;
-                    case "K":
-                        value = getKelvins();
-                        break;
-                }
-                break;
+                setCelcius(value);
             case "°F":
-                switch (convUnit) {
-                    case "°C":
-                        value = getCelcius();
-                        break;
-                    case "°F":
-                        value = getFahrenheit();
-                        break;
-                    case "K":
-                        value = getKelvins();
-                        break;
-                }
+                setFahrenheit(value);
                 break;
             case "K":
-                switch (convUnit) {
-                    case "°C":
-                        value = getCelcius();
-                        break;
-                    case "°F":
-                        value = getFahrenheit();
-                        break;
-                    case "K":
-                        value = getKelvins();
-                        break;
-                }
+                setKelvins(value);
                 break;
+        }
 
+        switch (convUnit) {
+            case "°C":
+                value = getCelcius();
+                break;
+            case "°F":
+                value = getFahrenheit();
+                break;
+            case "K":
+                value = getKelvins();
+                break;
         }
         return value;
     }
