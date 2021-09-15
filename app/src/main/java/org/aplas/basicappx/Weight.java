@@ -34,43 +34,25 @@ public class Weight {
     public double convert(String oriUnit, String convUnit, double value) {
         switch (oriUnit) {
             case "Grm":
-                switch (convUnit) {
-                    case "Grm":
-                        value = getGram();
-                        break;
-                    case "Onc":
-                        value = getOunce();
-                        break;
-                    case "Pnd":
-                        value = getPound();
-                        break;
-                }
+                setGram(value);
                 break;
             case "Onc":
-                switch (convUnit) {
-                    case "Grm":
-                        value = getGram();
-                        break;
-                    case "Onc":
-                        value = getOunce();
-                        break;
-                    case "Pnd":
-                        value = getPound();
-                        break;
-                }
+                setOunce(value);
                 break;
             case "Pnd":
-                switch (convUnit) {
-                    case "Grm":
-                        value = getGram();
-                        break;
-                    case "Onc":
-                        value = getOunce();
-                        break;
-                    case "Pnd":
-                        value = getPound();
-                        break;
-                }
+                setPound(value);
+                break;
+        }
+
+        switch (convUnit) {
+            case "Grm":
+                value = getGram();
+                break;
+            case "Onc":
+                value = getOunce();
+                break;
+            case "Pnd":
+                value = getPound();
                 break;
         }
         return value;
