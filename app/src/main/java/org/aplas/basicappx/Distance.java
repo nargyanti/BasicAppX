@@ -42,68 +42,31 @@ public class Distance {
     public double convert(String oriUnit, String convUnit, double value) {
         switch (oriUnit) {
             case "Mtr":
-                switch (convUnit) {
-                    case "Mtr":
-                        value = getMeter();
-                        break;
-                    case "Inc":
-                        value = getInch();
-                        break;
-                    case "Mil":
-                        value = getMile();
-                        break;
-                    case "Ft":
-                        value = getFoot();
-                        break;
-                }
+                setMeter(value);
                 break;
             case "Inc":
-                switch (convUnit) {
-                    case "Mtr":
-                        value = getMeter();
-                        break;
-                    case "Inc":
-                        value = getInch();
-                        break;
-                    case "Mil":
-                        value = getMile();
-                        break;
-                    case "Ft":
-                        value = getFoot();
-                        break;
-                }
+                setInch(value);
                 break;
             case "Mil":
-                switch (convUnit) {
-                    case "Mtr":
-                        value = getMeter();
-                        break;
-                    case "Inc":
-                        value = getInch();
-                        break;
-                    case "Mil":
-                        value = getMile();
-                        break;
-                    case "Ft":
-                        value = getFoot();
-                        break;
-                }
+                setMile(value);
                 break;
             case "Ft":
-                switch (convUnit) {
-                    case "Mtr":
-                        value = getMeter();
-                        break;
-                    case "Inc":
-                        value = getInch();
-                        break;
-                    case "Mil":
-                        value = getMile();
-                        break;
-                    case "Ft":
-                        value = getFoot();
-                        break;
-                }
+                setFoot(value);
+                break;
+        }
+
+        switch (convUnit) {
+            case "Mtr":
+                value = getMeter();
+                break;
+            case "Inc":
+                value = getInch();
+                break;
+            case "Mil":
+                value = getMile();
+                break;
+            case "Ft":
+                value = getFoot();
                 break;
         }
         return value;
