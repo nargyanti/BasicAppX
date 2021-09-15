@@ -292,4 +292,14 @@
 
     </TableLayout>
 
+    <ImageView
+        android:id="@+id/imgFormula"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/table"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1pt"
+        android:src="@drawable/formula"
+        android:visibility="invisible" />
+
 </RelativeLayout>

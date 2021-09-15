@@ -152,6 +152,17 @@ public class MainActivity extends AppCompatActivity {
                 doConvert();
             }
         });
+
+        formBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (formBox.isChecked()) {
+                    imgFormula.setVisibility(View.VISIBLE);
+                } else {
+                    imgFormula.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
     }
 
     @Override
