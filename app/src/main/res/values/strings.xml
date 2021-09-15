@@ -16,4 +16,15 @@
         <item>°F</item>
         <item>K</item>
     </string-array>
+    <string-array name="distList">
+        <item>Mtr</item>
+        <item>Inc</item>
+        <item>Mil</item>
+        <item>Ft</item>
+    </string-array>
+    <string-array name="weightList">
+        <item>Grm</item>
+        <item>Onc</item>
+        <item>Pnd</item>
+    </string-array>
 </resources>
